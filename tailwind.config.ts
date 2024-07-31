@@ -10,6 +10,10 @@ const config: Config = {
     colors: {
       white65: 'rgba(255, 255, 255, 0.65)',
       white: '#fff',
+      gray: 'rgba(85, 85, 84, 0.70)',
+      blue: '#006DF9',
+      yellow: '#EBA820',
+      black54: '#555554',
     },
     fontFamily: {
       anton: ['anton'],

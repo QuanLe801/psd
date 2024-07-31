@@ -2,6 +2,7 @@
 import Header from './containers/Header';
 import HeroBanner from './containers/HeroBanner';
 import Introduce from './containers/Introduce';
+import Produce from './containers/Produce';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Header />
       <HeroBanner />
       <Introduce />
+      <Produce />
     </main>
   );
 }

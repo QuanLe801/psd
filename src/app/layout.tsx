@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { AOSInit } from './aos';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,6 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <AOSInit />
       <body className={inter.className}>{children}</body>
     </html>
   );

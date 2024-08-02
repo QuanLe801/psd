@@ -18,15 +18,22 @@ const targetList = [
 
 export default function Target() {
   return (
-    <div className="flex">
+    <div className="flex" data-aos="fade-up">
       <div className="w-[36.375rem] pl-[5.5rem] pt-[8.13rem] pb-[8.81rem] bg-[url('/bg-target-icon.png')] bg-cover bg-no-repeat pr-[5.5rem]">
-        <div className="text-white font-anton text-[3.375rem] leading-[4.475rem] uppercase mb-[16.5rem]">
+        <div
+          className="text-white font-anton text-[3.375rem] leading-[4.475rem] uppercase mb-[16.5rem]"
+          data-aos="fade-up"
+        >
           mục tiêu dự án
         </div>
         {targetList.map((item: any, key: number) => {
           return (
             <div key={key}>
-              <div className="flex items-center">
+              <div
+                className="flex items-center"
+                data-aos="fade-up"
+                data-aos-delay={`${key * 100}`}
+              >
                 <Image src={item.icon} alt="" width={32} height={32} />
                 <span className="text-white font-anton text-[1.5rem] leading-[2.55rem] ml-[1rem]">
                   {item.label}

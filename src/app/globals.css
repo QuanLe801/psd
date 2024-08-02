@@ -12,10 +12,6 @@ html {
   }
 }
 
-body {
-  /* padding: 0rem 6.25rem; */
-}
-
 @layer base {
   @font-face {
     font-family: 'anton';

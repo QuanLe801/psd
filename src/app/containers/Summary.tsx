@@ -3,10 +3,11 @@ import React from 'react';
 
 export default function Summary() {
   return (
-    <div className="flex bg-[url('/summary-bg.png')] bg-no-repeat bg-cover bg-right-center mb-[20.81rem]">
+    <div className="flex bg-[url('/summary-bg.png')] bg-no-repeat bg-cover bg-right-center mb-[20.81rem] overflow-hidden">
       <div>
         <Image
           data-aos="fade-right"
+          data-aos-anchor-placement="top-center"
           src={'/summary.png'}
           alt="summary"
           width={1000}
@@ -16,6 +17,7 @@ export default function Summary() {
       </div>
       <div
         data-aos="fade-left"
+        data-aos-anchor-placement="top-center"
         className="flex-auto flex justify-center flex-col"
       >
         <Image

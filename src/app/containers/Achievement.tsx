@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Achievement() {
   return (
     <>
-      <div className="mt-[7.06rem] mx-auto">
+      <div className="mt-[7.06rem] mx-auto overflow-hidden">
         <h2
           className="font-anton text-[3.375rem] leading-[4.725rem] uppercase text-blue text-center"
           data-aos="fade-up"
@@ -40,7 +40,7 @@ export default function Achievement() {
               className="w-[16.9375rem] h-[34.625rem]"
             />
           </div>
-          <div>
+          <div className=" overflow-hidden">
             <span
               className="uppercase font-anton text-[1.875rem] leading-[2.625rem] text-white"
               data-aos="fade-up"
@@ -61,7 +61,7 @@ export default function Achievement() {
             />
           </div>
         </div>
-        <div className="flex mt-[7.75rem] justify-center">
+        <div className="flex mt-[7.75rem] justify-center overflow-hidden">
           <div
             className="mr-[7.75rem]"
             data-aos="fade-right"

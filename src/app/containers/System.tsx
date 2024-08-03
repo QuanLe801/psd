@@ -6,7 +6,7 @@ export default function System() {
   return (
     <div
       style={{ backgroundPositionX: '18.31rem', backgroundPositionY: '98%' }}
-      className="bg-[url('/logo.svg')] bg-no-repeat"
+      className="bg-[url('/logo.svg')] bg-no-repeat overflow-hidden"
     >
       <div className="mt-[14.62rem] flex justify-center mb-[3.44rem]">
         <div className="mr-[2.87rem]">

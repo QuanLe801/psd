@@ -14,16 +14,16 @@ export default function Home() {
       <Header />
       <div
         data-aos="fade-up"
-        className="mt-[6.94rem] w-full max-w-[72.25rem] p-[1rem] rounded-3xl bg-[#1f2251] bg-opacity-10 mx-auto shadow-[0_1px_50px_0px_rgba(0,0,0,0.08)] max-h-[41.6875rem] h-full"
+        className="mx-[0.62rem] my-[2.5rem] md:mt-[6.94rem] md:w-full md:max-w-[72.25rem] p-[0.5rem] md:p-[1rem] rounded-2xl md:rounded-3xl bg-[#1f2251] bg-opacity-10 md:mx-auto shadow-[0_1px_50px_0px_rgba(0,0,0,0.08)] max-h-[13.125rem] md:max-h-[41.6875rem] h-full"
       >
         <HeroBanner />
       </div>
       <Introduce />
       <Produce />
       <StyleGuide />
-      <Achievement />
-      <System />
-      <Summary />
+      {/* <Achievement /> */}
+      {/* <System /> */}
+      {/* <Summary /> */}
     </main>
   );
 }

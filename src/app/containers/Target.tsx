@@ -18,10 +18,10 @@ const targetList = [
 
 export default function Target() {
   return (
-    <div className="flex" data-aos="fade-up">
-      <div className="w-[36.375rem] pl-[5.5rem] pt-[8.13rem] pb-[8.81rem] bg-[url('/bg-target-icon.png')] bg-cover bg-no-repeat pr-[5.5rem]">
+    <div className="md:flex" data-aos="fade-up">
+      <div className="px-[0.62rem] md:w-[36.375rem] md:pl-[5.5rem] pt-[6.25rem] md:pt-[8.13rem] pb-[6.25rem] md:pb-[8.81rem] bg-[url('/bg-target-icon.png')] bg-cover bg-no-repeat md:pr-[5.5rem]">
         <div
-          className="text-white font-anton text-[3.375rem] leading-[4.475rem] uppercase mb-[16.5rem]"
+          className="text-white font-anton text-[1.5rem] leading-[2.1rem] md:text-[3.375rem] md:leading-[4.475rem] uppercase mb-[4.37rem] md:mb-[16.5rem]"
           data-aos="fade-up"
         >
           mục tiêu dự án
@@ -35,7 +35,7 @@ export default function Target() {
                 data-aos-delay={`${key * 100}`}
               >
                 <Image src={item.icon} alt="" width={32} height={32} />
-                <span className="text-white font-anton text-[1.5rem] leading-[2.55rem] ml-[1rem]">
+                <span className="text-white font-anton text-[1rem] leading-[1.7rem] md:text-[1.5rem] md:leading-[2.55rem] ml-[1rem]">
                   {item.label}
                 </span>
               </div>

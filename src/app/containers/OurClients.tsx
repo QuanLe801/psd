@@ -80,7 +80,7 @@ export default function OurClients() {
           </div>
         </div>
       </div>
-      <div className="flex mt-[7.5rem] mb-[3.75rem]">
+      <div className="flex mt-[7.5rem] mb-[3.75rem] overflow-hidden">
         <div className="mr-[6.25rem] ml-[8.37rem] max-w-[44.5625rem]">
           <div
             className="text-blue text-[3.375rem] leading-[4.725rem] uppercase font-anton mb-8"

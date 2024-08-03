@@ -9,7 +9,7 @@ export default function Produce() {
     '/produce-item3.png',
   ];
   return (
-    <div className="flex bg-bottom bg-[url('/produce.png')] bg-no-repeat bg-cover py-[11.88rem]">
+    <div className="flex bg-bottom bg-[url('/produce.png')] bg-no-repeat bg-cover py-[11.88rem] overflow-hidden">
       <div className=" pl-[6.25rem] w-full max-w-[46.0575rem] pr-[5.62rem]">
         <div
           className="font-anton text-[3.375rem] leading-[4.725rem] uppercase text-white mb-8"

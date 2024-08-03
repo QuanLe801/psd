@@ -45,11 +45,13 @@ export default function Achievement() {
               className="uppercase font-anton text-[1.875rem] leading-[2.625rem] text-white"
               data-aos="fade-up"
               data-aos-delay="200"
+              data-aos-anchor-placement="top-center"
             >
               Các dịch vụ nổi bật
             </span>
             <Image
               data-aos="fade-left"
+              data-aos-anchor-placement="top-center"
               data-aos-delay="300"
               src={'/achievement-rightColumn.png'}
               alt="achieve-leftColumn"
@@ -64,6 +66,7 @@ export default function Achievement() {
             className="mr-[7.75rem]"
             data-aos="fade-right"
             data-aos-delay="200"
+            data-aos-anchor-placement="top-center"
           >
             <Image
               src={'/achievement-leftColumn-section3.png'}
@@ -77,6 +80,7 @@ export default function Achievement() {
             className="max-w-[25.9375rem]"
             data-aos="fade-left"
             data-aos-delay="300"
+            data-aos-anchor-placement="top-center"
           >
             <Image
               src={'/achievement-rightColumn-section3.png'}
@@ -89,6 +93,7 @@ export default function Achievement() {
               className="text-white font-anton text-[1.875rem] mt-[4.19rem] mb-[1.5rem]"
               data-aos="fade-up"
               data-aos-delay="100"
+              data-aos-anchor-placement="top-center"
             >
               CƠ CHẾ KINH DOANH LINH HOẠT KẾT HỢP TINH THẦN THƯỢNG TÔN PHÁP LUẬT
             </div>

@@ -5,6 +5,7 @@ import HeroBanner from './containers/HeroBanner';
 import Introduce from './containers/Introduce';
 import Produce from './containers/Produce';
 import StyleGuide from './containers/StyleGuide';
+import Summary from './containers/Summary';
 import System from './containers/System';
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <StyleGuide />
       <Achievement />
       <System />
+      <Summary />
     </main>
   );
 }

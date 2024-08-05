@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useEffect, useMemo, useState } from 'react';
 import Marquee from 'react-fast-marquee';
-import ScrollTrigger from 'react-scroll-trigger';
+import { useInView } from 'react-intersection-observer';
 
 export default function OurClients() {
   const [count, setCount] = useState<{
@@ -14,20 +14,14 @@ export default function OurClients() {
     province: 7,
   });
 
-  const [visible, setVisible] = useState(false);
-
-  const onEnterViewport = () => {
-    setVisible(true);
-  };
-
-  const onExitViewport = () => {
-    setVisible(false);
-  };
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+  });
 
   const formatNumber = (num: number) => (num < 10 ? `0${num}` : num.toString());
 
   useEffect(() => {
-    if (!visible) return;
+    if (!inView) return;
     // Interval for agency counter
     const intervalId1 = setInterval(() => {
       setCount(prevCount => {
@@ -67,7 +61,7 @@ export default function OurClients() {
       clearInterval(intervalId2);
       clearInterval(intervalId3);
     };
-  }, [visible]);
+  }, [inView]);
 
   return (
     <>
@@ -117,29 +111,28 @@ export default function OurClients() {
             className="grid grid-cols-3"
             data-aos="fade-up"
             data-aos-delay="200"
+            ref={ref}
           >
             <div className="font-anton text-yellow text-[1.875rem] leading-[2.625rem] md:text-8xl md:leading-[8.4rem] uppercase text-center">
-              <ScrollTrigger onEnter={onEnterViewport} onExit={onExitViewport}>
+              <div>
                 {formatNumber(count.agency)}
                 <span>+</span>
-              </ScrollTrigger>
+              </div>
+
               <div className="text-[1rem] leading-[1.7rem] md:text-2xl md:leading-[2.55rem] text-black54">
                 đại lý
               </div>
             </div>
             <div className="font-anton text-yellow text-[1.875rem] leading-[2.625rem] md:text-8xl md:leading-[8.4rem] uppercase text-center">
-              <ScrollTrigger onEnter={onEnterViewport} onExit={onExitViewport}>
-                <div>{formatNumber(count.wareHouse)}</div>
-              </ScrollTrigger>
+              <div>{formatNumber(count.wareHouse)}</div>
 
               <div className="text-[1rem] leading-[1.7rem] md:text-2xl md:leading-[2.55rem] text-black54">
                 KHO BÃI
               </div>
             </div>
             <div className="font-anton text-yellow text-[1.875rem] leading-[2.625rem] md:text-8xl md:leading-[8.4rem] uppercase text-center">
-              <ScrollTrigger onEnter={onEnterViewport} onExit={onExitViewport}>
-                <div>{formatNumber(count.province)}</div>
-              </ScrollTrigger>
+              <div>{formatNumber(count.province)}</div>
+
               <div className="text-[1rem] leading-[1.7rem] md:text-2xl md:leading-[2.55rem] text-black54">
                 tỉnh thành
               </div>

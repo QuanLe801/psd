@@ -49,12 +49,12 @@ export default function System() {
           </div>
         </div>
       </div>
-      <div className="md:flex justify-center mb-[9.83rem] md:mb-[12.12rem]">
-        <div className="md:mr-[16.87rem]">
+      <div className="md:flex justify-between mb-[9.83rem] md:mb-[12.12rem]">
+        <div className="md:ml-[6.25rem]">
           <div
             data-aos="fade-up"
             data-aos-delay="200"
-            className="uppercase font-anton text-blue text-[1.5rem] leading-[2.1rem] md:text-[1.875rem] md:leading-[2.625rem] mb-4 md:mb-[1.87rem] md:mt-[8.45rem]"
+            className="uppercase font-anton text-blue text-[1.5rem] leading-[2.1rem] md:text-[1.875rem] md:leading-[2.625rem] md:ml-[0.94rem] mb-4 md:mb-[1.87rem] md:mt-[8.45rem]"
           >
             Bộ icon Glassmorphism
           </div>

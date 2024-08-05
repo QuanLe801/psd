@@ -41,7 +41,7 @@ export default function Achievement() {
               alt="achieve-leftColumn"
               width={500}
               height={500}
-              className="md:w-[16.9375rem] md:h-[34.625rem]"
+              className="w-[16.25rem] h-[32.9375rem] md:w-[16.9375rem] md:h-[34.625rem]"
             />
           </div>
           <div className="overflow-hidden">

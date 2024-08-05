@@ -7,7 +7,7 @@ import OurClients from './OurClients';
 export default function Introduce() {
   return (
     <>
-      <div className="mt-[7.25rem] w-full max-w-[87.5rem] mx-auto">
+      <div className="md:mt-[7.25rem] w-full max-w-[87.5rem] mx-auto">
         <Target />
       </div>
       <SubIntro />

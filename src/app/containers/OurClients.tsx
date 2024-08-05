@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React, { useEffect, useMemo, useState } from 'react';
 import Marquee from 'react-fast-marquee';
+import ScrollTrigger from 'react-scroll-trigger';
 
 export default function OurClients() {
   const [count, setCount] = useState<{
@@ -13,9 +14,20 @@ export default function OurClients() {
     province: 7,
   });
 
+  const [visible, setVisible] = useState(false);
+
+  const onEnterViewport = () => {
+    setVisible(true);
+  };
+
+  const onExitViewport = () => {
+    setVisible(false);
+  };
+
   const formatNumber = (num: number) => (num < 10 ? `0${num}` : num.toString());
 
   useEffect(() => {
+    if (!visible) return;
     // Interval for agency counter
     const intervalId1 = setInterval(() => {
       setCount(prevCount => {
@@ -55,20 +67,20 @@ export default function OurClients() {
       clearInterval(intervalId2);
       clearInterval(intervalId3);
     };
-  }, []);
+  }, [visible]);
 
   return (
     <>
-      <div className="bg-[url('/our-clients.png')] bg-no-repeat bg-cover bg-right">
-        <div className="my-[12.94rem] ml-[8.37rem] max-w-[35.375rem]">
+      <div className="px-[0.63rem] md:bg-[url('/our-clients.png')] bg-[url('/our-clients-mobile.png')] bg-no-repeat bg-cover bg-right">
+        <div className="md:my-[12.94rem] md:ml-[6.25rem] md:max-w-[35.375rem]">
           <div
-            className="text-white font-anton text-[3.375rem] leading-[4.725rem] uppercase"
+            className="mt-[4.37rem] md:mt-0 text-white mb-[1rem] md:mb-0 font-anton md:text-[3.375rem] md:leading-[4.725rem] text-[1.5rem] leading-[2.15rem] uppercase"
             data-aos="fade-up"
           >
             Khách hàng của PSd
           </div>
           <div
-            className="text-white font-sans text-2xl leading-[2.4rem] mt-8"
+            className="text-justify mb-[23.5rem] md:mb-0 text-white font-sans md:text-2xl md:leading-[2.4rem] text-[0.875rem] leading-[1.3125rem] md:mt-8"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -80,16 +92,17 @@ export default function OurClients() {
           </div>
         </div>
       </div>
-      <div className="flex mt-[7.5rem] mb-[3.75rem] overflow-hidden">
-        <div className="mr-[6.25rem] ml-[8.37rem] max-w-[44.5625rem]">
+      <div className="flex flex-col-reverse md:flex-row mt-[3.12rem] md:mt-[7.5rem] md:mb-[3.75rem] mb-[1rem] overflow-hidden">
+        <div className="mx-[0.62rem] md:mr-[6.25rem] md:ml-[8.37rem] max-w-[44.5625rem]">
           <div
-            className="text-blue text-[3.375rem] leading-[4.725rem] uppercase font-anton mb-8"
+            className="text-blue md:text-[3.375rem] md:leading-[4.725rem] text-[1.5rem] uppercase font-anton mb-[1rem] md:mb-8  mt-[2rem] md:mt-0"
             data-aos="fade-up"
           >
-            giới thiệu chung <span className="text-yellow block">về PSD</span>
+            giới thiệu chung{' '}
+            <span className="text-yellow inline md:block">về PSD</span>
           </div>
           <div
-            className="text-black54 font-sans text-2xl leading-[2.55rem] lowercase mb-[2.53rem]"
+            className="text-justify text-black54 font-sans text-[0.875rem] leading-[1.3125rem] md:text-2xl md:leading-[2.55rem] lowercase mb-[2.53rem]"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -105,24 +118,29 @@ export default function OurClients() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div className="font-anton text-yellow text-8xl leading-[8.4rem] uppercase text-center">
-              <div>
+            <div className="font-anton text-yellow text-[1.875rem] leading-[2.625rem] md:text-8xl md:leading-[8.4rem] uppercase text-center">
+              <ScrollTrigger onEnter={onEnterViewport} onExit={onExitViewport}>
                 {formatNumber(count.agency)}
                 <span>+</span>
-              </div>
-              <div className="text-2xl leading-[2.55rem] text-black54">
+              </ScrollTrigger>
+              <div className="text-[1rem] leading-[1.7rem] md:text-2xl md:leading-[2.55rem] text-black54">
                 đại lý
               </div>
             </div>
-            <div className="font-anton text-yellow text-8xl leading-[8.4rem] uppercase text-center">
-              <div>{formatNumber(count.wareHouse)}</div>
-              <div className="text-2xl leading-[2.55rem] text-black54">
+            <div className="font-anton text-yellow text-[1.875rem] leading-[2.625rem] md:text-8xl md:leading-[8.4rem] uppercase text-center">
+              <ScrollTrigger onEnter={onEnterViewport} onExit={onExitViewport}>
+                <div>{formatNumber(count.wareHouse)}</div>
+              </ScrollTrigger>
+
+              <div className="text-[1rem] leading-[1.7rem] md:text-2xl md:leading-[2.55rem] text-black54">
                 KHO BÃI
               </div>
             </div>
-            <div className="font-anton text-yellow text-8xl leading-[8.4rem] uppercase text-center">
-              <div>{formatNumber(count.province)}</div>
-              <div className="text-2xl leading-[2.55rem] text-black54">
+            <div className="font-anton text-yellow text-[1.875rem] leading-[2.625rem] md:text-8xl md:leading-[8.4rem] uppercase text-center">
+              <ScrollTrigger onEnter={onEnterViewport} onExit={onExitViewport}>
+                <div>{formatNumber(count.province)}</div>
+              </ScrollTrigger>
+              <div className="text-[1rem] leading-[1.7rem] md:text-2xl md:leading-[2.55rem] text-black54">
                 tỉnh thành
               </div>
             </div>
@@ -138,7 +156,7 @@ export default function OurClients() {
           />
         </div>
       </div>
-      <Marquee className="uppercase font-anton text-[#D9D9D945] text-[15.625rem]  opacity-45 h-full overflow-y-clip">
+      <Marquee className="uppercase font-anton text-[#D9D9D945] md:text-[15.625rem] text-[7.5rem] opacity-45 h-full overflow-y-clip">
         <span className="after:content-[''] after:ml-11 h-full">
           Hệ thống phân phối
         </span>

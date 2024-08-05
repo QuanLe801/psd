@@ -49,8 +49,8 @@ export default function System() {
           </div>
         </div>
       </div>
-      <div className="md:flex justify-between mb-[9.83rem] md:mb-[12.12rem]">
-        <div className="md:ml-[6.25rem]">
+      <div className="md:flex mb-[9.83rem] md:mb-[12.12rem]">
+        <div className="md:ml-[6.25rem] md:mr-[16.87rem]">
           <div
             data-aos="fade-up"
             data-aos-delay="200"

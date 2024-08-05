@@ -148,39 +148,43 @@ export default function StyleGuide() {
                 />
               </div>
             </div>
-            {styleGuides.map((item: any, key: number) => (
-              <div
-                data-aos="fade-up"
-                data-aos-delay={`${(key + 1) * 100}`}
-                key={key}
-                style={{ paddingBottom: item.paddingBottom }}
-                className={`first:mt-0 mt-[1.87rem] md:pl-4 grid grid-cols-[48.55%_32.55%_auto] last:border-b-0 border-b-[0.0625rem] border-opacity-15 border-[black]`}
-              >
-                <span
-                  className={`font-${item.firstColumn.fontFamily} text-black ${
-                    item.firstColumn.uppercase && 'uppercase'
-                  } leading-[100%]`}
-                  style={{
-                    fontSize: !isMobile
-                      ? item?.firstColumn?.fontSize
-                      : item?.firstColumn?.fontMobile,
-                    fontWeight: item?.firstColumn?.fontWeight,
-                  }}
+            <div>
+              {styleGuides.map((item: any, key: number) => (
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay={`${(key + 1) * 100}`}
+                  key={key}
+                  style={{ paddingBottom: item.paddingBottom }}
+                  className={`first:mt-0 mt-[1.87rem] md:pl-4 grid grid-cols-[48.55%_32.55%_auto] last:border-b-0 border-b-[0.0625rem] border-opacity-15 border-[black]`}
                 >
-                  {item.firstColumn.title}
-                </span>
-                <span
-                  className={`font-sans text-black text-[1.125rem} font-[300] opacity-75 pl-[1rem] md:pl-0 md:leading-[100%]`}
-                >
-                  {item.secondColumn.title}
-                </span>
-                <span
-                  className={`font-sans text-black text-[1.125rem] font-[300] opacity-75 md:leading-[100%] text-right md:text-left`}
-                >
-                  {item.thirdColumn.title}
-                </span>
-              </div>
-            ))}
+                  <span
+                    className={`font-${
+                      item.firstColumn.fontFamily
+                    } text-black ${
+                      item.firstColumn.uppercase && 'uppercase'
+                    } leading-[100%]`}
+                    style={{
+                      fontSize: !isMobile
+                        ? item?.firstColumn?.fontSize
+                        : item?.firstColumn?.fontMobile,
+                      fontWeight: item?.firstColumn?.fontWeight,
+                    }}
+                  >
+                    {item.firstColumn.title}
+                  </span>
+                  <span
+                    className={`font-sans text-black text-[1.125rem} font-[300] opacity-75 pl-[1rem] md:pl-0 md:leading-[100%]`}
+                  >
+                    {item.secondColumn.title}
+                  </span>
+                  <span
+                    className={`font-sans text-black text-[1.125rem] font-[300] opacity-75 md:leading-[100%] text-right md:text-left`}
+                  >
+                    {item.thirdColumn.title}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

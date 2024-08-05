@@ -21,9 +21,9 @@ export default function Home() {
       <Introduce />
       <Produce />
       <StyleGuide />
-      {/* <Achievement /> */}
-      {/* <System /> */}
-      {/* <Summary /> */}
+      <Achievement />
+      <System />
+      <Summary />
     </main>
   );
 }

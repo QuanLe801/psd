@@ -44,7 +44,7 @@ export default function StyleGuide() {
   };
 
   return (
-    <div className="md:px-0 mt-[4.38rem] md:mt-[7.5rem] pb-[6.87rem] md:pb-[8.47rem]">
+    <div className="md:px-0 mt-[4.38rem] md:mt-[7.5rem] ">
       <h3
         className="px-[1.5rem]  mb-[1.5rem] text-center text-blue font-anton text-[1.5rem] leading-[2.1rem] md:text-[3.375rem] md:leading-[4.725rem] uppercase"
         data-aos="fade-up"
@@ -184,28 +184,28 @@ export default function StyleGuide() {
           </div>
         </div>
       </div>
-      <div className="mt-[2.1rem] flex justify-center">
+      <div className="bg-[#d9d9d9] bg-opacity-10 px-[0.62rem] md:px-0 mt-[2.1rem] md:flex md:justify-center pb-[6.87rem] md:pb-[8.47rem]">
         <Image
           src={'/staff.png'}
           alt="staff"
           width={1000}
           height={1000}
-          className="w-[36.97506rem] h-[45.22819rem] mr-[6rem]"
+          className="md:w-[36.97506rem] md:h-[45.22819rem] mr-[6rem]"
           data-aos="fade-up"
           data-aos-delay={`100`}
         />
-        <div className="mt-[12.41rem]">
+        <div className="mt-[2.92rem] md:mt-[12.41rem]">
           <Image
             src={'/quote.svg'}
             alt="quote"
             width={1000}
             height={1000}
-            className="w-[4.63rem] h-[4.75rem] mb-[2.5rem]"
+            className="w-[2.6875rem] h-[2.125rem] md:w-[4.63rem] md:h-[4.75rem] mb-[1rem] md:mb-[2.5rem]"
             data-aos="fade-up"
             data-aos-delay="200"
           />
           <h2
-            className="font-anton text-[3.375rem] text-black54 uppercase w-full max-w-[42.5rem]"
+            className="font-anton text-[2rem] md:text-[3.375rem] text-black54 uppercase w-full max-w-[42.5rem]"
             data-aos="fade-up"
             data-aos-delay="300"
           >
